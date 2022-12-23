@@ -1,4 +1,3 @@
-import React from "react";
 import d20 from "./icons/d20.svg";
 import archive from "./icons/scrollicon.svg";
 import map from "./icons/map.svg";
