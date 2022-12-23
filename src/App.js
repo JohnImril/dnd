@@ -15,21 +15,21 @@ const App = () => {
             className="app-header__link"
           >
             <img src={archive} className="logo" alt="logo" />
-            {/* Archive */}
+            Archive
           </a>
           <a
             href="https://foundry.thedirtysagestavern.com"
             className="app-header__link"
           >
             <img src={d20} className="App-logo" alt="logo" />
-            {/* Table */}
+            Table
           </a>
           <a
             href="https://map.thedirtysagestavern.com"
             className="app-header__link"
           >
             <img src={map} className="logo" alt="logo" />
-            {/* Map */}
+            Map
           </a>
         </div>
       </header>
