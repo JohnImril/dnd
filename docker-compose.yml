@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   client:
-    build: ./dnd
+    build: .
     container_name: client_frontend
     ports:
       - '3000:3000'
