@@ -12,3 +12,6 @@ services:
     tty: true
     networks:
       - proxy
+networks:
+  proxy:
+    external: true
