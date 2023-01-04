@@ -1,8 +1,14 @@
-version: "3.9"
+version: '3.8'
 services:
-  web:
-    image: node:15.8-alpine3.11
+  client:
+    build: ./client
+    container_name: client_frontend
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
-      - ".:/app"
+      - ./client:/app
+      - ./app/node_modules
+    stdin_open: true
+    tty: true
+    networks:
+      - proxy
