@@ -1,12 +1,12 @@
 version: '3.8'
 services:
   client:
-    build: ./client
+    build: ./dnd
     container_name: client_frontend
     ports:
       - '3000:3000'
     volumes:
-      - ./client:/app
+      - ./dnd:/app
       - ./app/node_modules
     stdin_open: true
     tty: true
