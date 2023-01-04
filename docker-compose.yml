@@ -6,7 +6,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - ./dnd:/app
+      - .:/app
       - ./app/node_modules
     stdin_open: true
     tty: true
