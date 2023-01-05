@@ -35,6 +35,11 @@
   /* border-radius: 10px; */
 }
 
+svg {
+  width: 400px;
+  height: 400px;
+}
+
 .App-logo {
   height: 40vmin;
   width: 40vmin;
