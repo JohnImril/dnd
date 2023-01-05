@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  client:
+    build: .
+    container_name: client_frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - ./node_modules:/app/node_modules
+    stdin_open: true
+    tty: true
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mainpage.entrypoints=http"
+      - "traefik.http.routers.mainpage.rule=Host(`thedirtysagestavern.com`)"
+      - "traefik.http.middlewares.mainpage-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.mainpage.middlewares=mainpage-https-redirect"
+      - "traefik.http.routers.mainpage-secure.entrypoints=https"
+      - "traefik.http.routers.mainpage-secure.rule=Host(`thedirtysagestavern.com`)"
+      - "traefik.http.routers.mainpage-secure.tls=true"
+      - "traefik.http.routers.mainpage-secure.tls.certresolver=http"
+      - "traefik.http.routers.mainpage-secure.service=mainpage"
+      - "traefik.http.services.mainpage.loadbalancer.server.port=3000"
+      - "traefik.docker.network=proxy"
+networks:
+  proxy:
+    external: true
