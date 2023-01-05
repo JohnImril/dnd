@@ -8,6 +8,7 @@ services:
     volumes:
       - .:/app
       - ./node_modules:/app/node_modules
+      - ./dist:/app/dist
     stdin_open: true
     tty: true
     networks:
