@@ -6,7 +6,7 @@ const App = () => {
       <header className="app-header">
         <div className="cards">
           <a
-            href="https://archive.thedirtysagestavern.com"
+            href="https://kanka.io/en-US/campaign/172250"
             className="app-header__link"
           >
             <svg viewBox="0 0 41.434 50.773" xmlns="http://www.w3.org/2000/svg">
