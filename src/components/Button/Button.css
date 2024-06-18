@@ -1,0 +1,51 @@
+.button-xp.landing__button {
+	width: 250px;
+	height: 100%;
+	z-index: 10;
+	border: none;
+}
+
+.button__img-container,
+.button__inner {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.button__img--left,
+.button__img--right {
+	width: 40px;
+}
+
+.button__img__img {
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+}
+
+.button__img--middle {
+	width: calc(100% - 80px);
+}
+
+.button__img--left .button__img__img--bg {
+	background-image: url(../../assets/img/btn_left.png);
+}
+
+.button__img--middle .button__img__img--bg {
+	background-image: url(../../assets/img/btn_middle.avif);
+}
+
+.button__img--right .button__img__img--bg {
+	background-image: url(../../assets/img/btn_right.png);
+}
+
+.button__text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: #f8f4ec;
+	font-weight: 700;
+	text-transform: uppercase;
+	transform: translateZ(0) translateX(-50%) translateY(-50%);
+}
