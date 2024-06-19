@@ -1,72 +1,96 @@
+import { Button } from "./components/Button/Button";
+import RotatingCrystals from "./components/RotatingCrystals/RotatingCrystals";
+
 import "./App.css";
 
 const App = () => {
-  return (
-    <div className="app">
-      <header className="app-header">
-        <div className="cards">
-          <a
-            href="https://kanka.io/en-US/campaign/172250"
-            className="app-header__link"
-          >
-            <svg viewBox="0 0 41.434 50.773" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" stroke="#fff" strokeWidth="26.744">
-                <path
-                  d="M12.158 8.152S1.893 29.336 1.166 38.147s1.212 8.487 2.02 9.376c.809.89 26.877 1.946 26.877 1.946M31.964 49.773s6 .404 6.6-5.898c.482-5.065-4.35-4.927-5.85-4.927s-5.775-.121-5.775-.121"
-                  strokeWidth="1.9999163199999999"
-                />
-                <path
-                  d="M32.816 9.819 9.434 8.149s-3.762-.416-3.66-3.5c.101-3.082 4.52-3.602 4.858-3.636C10.97.979 34.428 2.05 34.428 2.05M34.142 38.984s-1.857.065-2.962.632c-1.199.616-2.357 1.757-1.97 3.838.742 3.999 2.651 3.399 3.712 3.199 1.06-.2 1.909-1.542 1.803-1.97l-.106-.43-5.303-.313"
-                  strokeWidth="1.9999163199999999"
-                />
-                <path
-                  d="M34.552 2.024c1.5 0 6.332-.138 5.85 4.928-.203 2.13-1.023 3.493-2.064 4.427-2.028 2.072-5.98 9.979-7.99 15.401-1.14 3.073-6.6 17.73-3.896 20.615 2.705 2.885 6.523 2.314 6.523 2.314"
-                  strokeWidth="1.9999163199999999"
-                />
-                <path
-                  d="M35.979 2.06s-1.857.065-2.962.632c-1.199.616-2.357 1.757-1.97 3.838.742 3.999 2.081 3.296 3.712 3.199.889-.053 1.514-1.128 1.803-1.97.141-.414-.106-1.306-.106-1.306l-5.303-.314"
-                  strokeWidth="1.9999163199999999"
-                />
-              </g>
-            </svg>
-            Archive
-          </a>
-          <a
-            href="https://foundry.thedirtysagestavern.com"
-            className="app-header__link"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 100 100"
-              fill="#fff"
-              className="App-logo"
-            >
-              <path
-                d="m80.644 87.982 16.592-41.483c.054-.128.088-.26.108-.394.006-.039.007-.077.011-.116a1.737 1.737 0 0 0-.075-.659c-.012-.034-.019-.069-.031-.103a1.736 1.736 0 0 0-.178-.335l-.01-.018L67.999 3.358c-.01-.013-.003-.026-.013-.04L68 3.315V4h-.037c-.403-1-1.094-1.124-1.752-.976 0 .004-.004-.012-.007-.012-.003.004-.01-.012-.01-.012h-.024c-.003 0-.003-.151-.007-.151L20.495 15.227c-.025.007-.046-.019-.071-.011-.087.028-.172.041-.253.083a1.602 1.602 0 0 0-.152.085c-.051.033-.101.061-.147.099a1.661 1.661 0 0 0-.26.265c-.03.039-.059.076-.085.117a1.7 1.7 0 0 0-.12.223c-.011.023-.027.042-.036.066l-16.46 41.51c-.02.051.089.104.089.156V58.404c0 .074-.002.15.012.223.003.004-.012.004-.012.006V58.657c0 .191-.046.377.06.545 0-.002-.03.004-.03.004 0 .004-.03.004-.03.004v.002l-.045.004c.03.047.036.09.068.133l29.049 37.359c.002.004 0 .006.002.01.002.002 0 .004.002.008.006.008.014.014.021.021.024.029.052.051.078.078.027.029.053.057.082.082.03.027.055.062.086.088.026.02.057.033.084.053.04.027.081.053.123.076.005.004.01.008.016.01.087.051.176.09.269.123.042.014.082.031.125.043.021.006.041.018.062.021.123.027.249.043.375.043.099 0 .202-.012.304-.027l45.669-8.303a1.48 1.48 0 0 0 .163-.037c.014-.005.029.003.042.003h.004c.021 0 .039-.027.06-.035.041-.014.08-.034.12-.052.021-.01.044-.019.064-.03a.17.17 0 0 1 .033-.017c.014-.008.023-.021.037-.028.14-.078.269-.174.38-.285.014-.016.024-.034.038-.048.109-.119.201-.252.271-.398.006-.01.016-.018.021-.029a.203.203 0 0 0 .011-.026l.005-.01.025-.06zm-3.033-3.521L48.805 66.453l32.407-25.202-3.601 43.21zM46.817 63.709 35.863 23.542 79.681 38.15 46.817 63.709zm37.851-23.167 8.926 5.952-11.902 29.75 2.976-35.702zm4.46-1.096L84.53 36.38l-6.129-12.257 10.727 15.323zm-9.252-4.801L37.807 20.622 65.854 6.599l14.022 28.046zM33.268 19.107l-6.485-2.162 23.781-6.487-17.296 8.649zm-11.348-.212 8.67 2.891-20.233 26.012L21.92 18.895zm10.732 5.754 10.845 39.757-36.146-7.228 25.301-32.529zm10.82 43.208L32.969 92.363 8.462 60.855l35.01 7.002zm3.159 1.233 27.826 17.393-38.263 6.959L46.631 69.09z"
-                data-reactid=".0.0.0.0.0.0"
-              />
-            </svg>
-            Table
-          </a>
-          <a
-            href="https://map.thedirtysagestavern.com"
-            className="app-header__link"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 58 58"
-              fill="#fff"
-            >
-              <path d="M51 1.5c-3.519 0-6.432 2.613-6.92 6H13.92c-.488-3.387-3.401-6-6.92-6-3.859 0-7 3.14-7 7v41c0 3.86 3.141 7 7 7h44c3.859 0 7-3.14 7-7v-41c0-3.86-3.141-7-7-7zm-49 7c0-2.757 2.243-5 5-5s5 2.243 5 5v36.105C10.729 43.307 8.957 42.5 7 42.5s-3.729.807-5 2.105V8.5zm49 46H23v-1a1 1 0 1 0-2 0v1h-2v-4a1 1 0 1 0-2 0v4H7c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5h2v-40h20v4a1 1 0 1 0 2 0v-4h2v2a1 1 0 1 0 2 0v-2h4v40h2c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5zm5-9.895c-1.271-1.298-3.043-2.105-5-2.105s-3.729.807-5 2.105V8.5c0-2.757 2.243-5 5-5s5 2.243 5 5v36.105z" />
-              <path d="M22.332 28.661A7.168 7.168 0 0 1 22 26.5a1 1 0 1 0-2 0c0 .938.143 1.867.424 2.761a1 1 0 0 0 1.908-.6zM25.972 33.137a8.626 8.626 0 0 1-2.243-1.921 1 1 0 1 0-1.545 1.27 10.59 10.59 0 0 0 2.759 2.366.997.997 0 0 0 1.372-.343 1 1 0 0 0-.343-1.372zM33.761 34.924A9.198 9.198 0 0 0 31 34.5c-.766 0-1.526-.085-2.262-.254a1 1 0 0 0-.447 1.949c.883.202 1.794.305 2.709.305a7.2 7.2 0 0 1 2.161.332 1 1 0 0 0 .6-1.908zM39.352 39.442a10.655 10.655 0 0 0-2.366-2.759 1 1 0 0 0-1.269 1.545 8.695 8.695 0 0 1 1.921 2.243.998.998 0 1 0 1.714-1.029zM39.497 42.04a1 1 0 0 0-.751 1.199c.169.733.254 1.493.254 2.261a1 1 0 1 0 2 0c0-.918-.103-1.83-.305-2.709a1 1 0 0 0-1.198-.751zM23.293 25.207l1.414-1.414-2.293-2.293 2.293-2.293-1.414-1.414L21 20.086l-2.293-2.293-1.414 1.414 2.293 2.293-2.293 2.293 1.414 1.414L21 22.914z" />
-            </svg>
-            Map
-          </a>
-        </div>
-      </header>
-      <div className="container"></div>
-    </div>
-  );
+	const buttonLinks = [
+		{ href: "https://kanka.io/en-US/campaign/172250", label: "History" },
+		{ href: "https://foundry.thedirtysagestavern.com", label: "Play" },
+		{ href: "https://map.thedirtysagestavern.com", label: "Map" },
+	];
+
+	const renderSVG = (id: string, d: string) => (
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.077 71.72">
+			<defs>
+				<clipPath id={id} clipPathUnits="objectBoundingBox" transform="scale(0.007242335798, 0.0139431121)">
+					<path style={{ fillRule: "evenodd", clipRule: "evenodd", fill: "#002AF9" }} d={d}></path>
+				</clipPath>
+			</defs>
+		</svg>
+	);
+
+	const sides = ["left", "right"];
+
+	return (
+		<div className="app">
+			<div className="landing">
+				<div className="landing__wrapper-width">
+					<div className="landing__wrapper-height">
+						{sides.map((side) => (
+							<div
+								key={side}
+								className={`landing__${side}-block`}
+								style={{ transform: "matrix(1, 0, 0, 1, 0, 0)" }}
+							>
+								<div className={`landing__${side}-block__borders`}></div>
+							</div>
+						))}
+						{sides.map((side) => (
+							<div
+								key={side}
+								className={`landing__bottom-block landing__bottom-block--${side}`}
+								style={{ transform: "matrix(1, 0, 0, 1, 0, 0)" }}
+							>
+								<div className="landing__bottom-block__mask-container">
+									{renderSVG(
+										`bottom-${side}-mask`,
+										side === "left"
+											? "M71.025,71.339h66.361V1.013H0.699v0C0.699,39.853,32.185,71.339,71.025,71.339z"
+											: "M67.025,71.339H0.664V1.013H137.35v0C137.35,39.853,105.864,71.339,67.025,71.339z"
+									)}
+								</div>
+								<div className="landing__bottom-block__inner">
+									<div className={`landing__vignette-img landing__bottom--${side}__bg`}></div>
+								</div>
+								<div className="landing__bottom-block__borders"></div>
+							</div>
+						))}
+						{sides.map((side) => (
+							<div
+								key={side}
+								className={`landing__center-bar landing__center-bar--${side}`}
+								style={{ transform: "matrix(1, 0, 0, 1, 0, 0)" }}
+							></div>
+						))}
+						<div
+							className="landing__center-corner landing__center-corner--left"
+							style={{ transform: "matrix(1, 0, 0, 1, 0, 0)" }}
+						></div>
+						<div
+							className="landing__center-block"
+							style={{ opacity: 1, transform: "matrix(1, 0, 0, 1, 0, 0)" }}
+						></div>
+						<div
+							className="landing__center-corner landing__center-corner--right"
+							style={{ transform: "matrix(1, 0, 0, 1, 0, 0)" }}
+						></div>
+						<div className="landing__title-placed">
+							<div className="row-button">
+								{buttonLinks.map((button, index) => (
+									<Button key={index} onClick={() => (window.location.href = button.href)}>
+										{button.label}
+									</Button>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<RotatingCrystals />
+		</div>
+	);
 };
 
 export default App;
