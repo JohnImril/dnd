@@ -1,4 +1,3 @@
-````markdown
 # DnD Project
 
 This is a React-based project that renders 3D rotating crystals using Three.js. The project includes optimizations to improve performance.
@@ -35,7 +34,6 @@ To start the development server, run:
 ```sh
 npm start
 ```
-````
 
 This will start the `webpack-dev-server` on `http://localhost:3000` with hot module replacement enabled.
 
