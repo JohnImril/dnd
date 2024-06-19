@@ -5,7 +5,6 @@ import "./App.css";
 
 const App = () => {
 	const buttonLinks = [
-		{ href: "https://kanka.io/en-US/campaign/172250", label: "History" },
 		{ href: "https://foundry.thedirtysagestavern.com", label: "Play" },
 		{ href: "https://map.thedirtysagestavern.com", label: "Map" },
 	];
