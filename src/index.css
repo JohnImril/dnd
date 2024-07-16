@@ -96,7 +96,7 @@ video {
 }
 
 body {
-	background-image: url(assets/img/background_white_pattern.avif);
+	background-image: url(images/background_white_pattern.avif);
 	background-repeat: repeat;
 	line-height: 1;
 }

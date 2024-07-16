@@ -3,6 +3,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DDSLoader } from "three/examples/jsm/loaders/DDSLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import crystalTextures from "../../textures/crystal.jpg.dds";
+import model from "../../models/scene.glb";
 
 import "./RotatingCrystals.css";
 
@@ -33,13 +35,13 @@ const RotatingCrystals: React.FC = React.memo(() => {
 		window.addEventListener("resize", onWindowResize);
 
 		const ddsLoader = new DDSLoader();
-		const crystalTexture = ddsLoader.load("./textures/crystal.jpg.dds", (texture) => {
+		const crystalTexture = ddsLoader.load(crystalTextures, (texture) => {
 			texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 		});
 
 		const loader = new GLTFLoader();
 		loader.load(
-			"./models/scene.glb",
+			model,
 			(gltf) => {
 				const model = gltf.scene;
 
