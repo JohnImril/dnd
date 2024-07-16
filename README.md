@@ -1,5 +1,7 @@
 # DnD Project
 
+![App Screenshot](./assets/screenshot.png)
+
 This is a React-based project that renders 3D rotating crystals using Three.js. The project includes optimizations to improve performance.
 
 ## Table of Contents
