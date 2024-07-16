@@ -99,7 +99,7 @@ const RotatingCrystals: React.FC = React.memo(() => {
 			(error) => console.error(error)
 		);
 
-		camera.position.set(0, 20, 80); // Начальная позиция камеры
+		camera.position.set(0, 20, 80);
 
 		const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
 		directionalLight.position.set(5, 5, 5).normalize();
