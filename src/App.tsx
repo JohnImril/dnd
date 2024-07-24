@@ -1,5 +1,6 @@
+import { Suspense, lazy } from "react";
 import { Button } from "./components/Button/Button";
-import RotatingCrystals from "./components/RotatingCrystals/RotatingCrystals";
+const RotatingCrystals = lazy(() => import("./components/RotatingCrystals/RotatingCrystals"));
 
 import "./App.css";
 
@@ -87,7 +88,9 @@ const App = () => {
 				</div>
 			</div>
 
-			<RotatingCrystals />
+			<Suspense fallback={<div />}>
+				<RotatingCrystals />
+			</Suspense>
 		</div>
 	);
 };
