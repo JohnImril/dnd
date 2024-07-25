@@ -40,7 +40,7 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.(png|jpe?g|gif|avif)$/i,
+				test: /\.(png|jpe?g|gif|avif|ico)$/i,
 				type: "asset/resource",
 				generator: {
 					filename: "images/[name][contenthash][ext]",
@@ -48,9 +48,16 @@ module.exports = {
 			},
 		],
 	},
+	optimization: {
+		splitChunks: {
+			chunks: "all",
+		},
+		runtimeChunk: "single",
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
+			inject: "body",
 		}),
 	],
 };

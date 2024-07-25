@@ -6,20 +6,17 @@
 		<meta name="theme-color" content="#e9e4de" />
 		<meta name="description" content="The Dirty Sages Tavern" />
 		<title>The Dirty Sages Tavern</title>
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-		<link rel="preload" href="images/center-block_img.avif" as="image" />
+		<link rel="icon" href="<%= require('./images/favicon.ico') %>" type="image/x-icon" />
+		<link rel="icon" type="image/png" sizes="16x16" href="<%= require('./images/favicon-16x16.png') %>" />
+		<link rel="icon" type="image/png" sizes="32x32" href="<%= require('./images/favicon-32x32.png') %>" />
+		<link rel="preload" href="<%= require('./images/center-block_img.avif') %>" as="image" />
+		<link rel="preload" href="<%= require('./images/background_white_pattern.avif') %>" as="image" />
 		<style>
+			body {
+				background-image: url("<%= require('./images/background_white_pattern.avif') %>");
+			}
 			.landing__center-block {
-				position: absolute;
-				top: 0;
-				left: 21.9106%;
-				width: 56.2664%;
-				height: 77.5707%;
-				background-image: url("images/center-block_img.avif");
-				background-size: cover;
-				will-change: transform;
+				background-image: url("<%= require('./images/center-block_img.avif') %>");
 			}
 		</style>
 	</head>
