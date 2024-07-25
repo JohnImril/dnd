@@ -6,7 +6,7 @@ module.exports = {
 	entry: "./src/index.tsx",
 	output: {
 		path: path.resolve(__dirname, "build"),
-		filename: "bundle-[hash].js",
+		filename: "bundle-[contenthash].js",
 	},
 	resolve: {
 		extensions: [".ts", ".tsx", ".js"],
@@ -25,7 +25,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				loader: "ts-loader",
+				use: "ts-loader",
 			},
 			{
 				test: /\.css$/,
@@ -41,6 +41,13 @@ module.exports = {
 						},
 					},
 				],
+			},
+			{
+				test: /\.(png|jpe?g|gif|avif)$/i,
+				type: "asset/resource",
+				generator: {
+					filename: "images/[name][contenthash][ext]",
+				},
 			},
 		],
 	},
