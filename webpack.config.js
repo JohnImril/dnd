@@ -7,6 +7,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "build"),
 		filename: "bundle-[contenthash].js",
+		assetModuleFilename: "images/[hash][ext][query]",
 	},
 	resolve: {
 		extensions: [".ts", ".tsx", ".js"],
@@ -32,15 +33,11 @@ module.exports = {
 				use: ["style-loader", "css-loader"],
 			},
 			{
-				test: /\.(glb|dds)$/,
-				use: [
-					{
-						loader: "file-loader",
-						options: {
-							name: "[name].[hash].[ext]",
-						},
-					},
-				],
+				test: /\.(glb|dds)$/i,
+				type: "asset/resource",
+				generator: {
+					filename: "models/[name][hash][ext]",
+				},
 			},
 			{
 				test: /\.(png|jpe?g|gif|avif)$/i,
