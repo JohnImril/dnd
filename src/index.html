@@ -9,14 +9,22 @@
 		<link rel="icon" href="<%= require('./images/favicon.ico') %>" type="image/x-icon" />
 		<link rel="icon" type="image/png" sizes="16x16" href="<%= require('./images/favicon-16x16.png') %>" />
 		<link rel="icon" type="image/png" sizes="32x32" href="<%= require('./images/favicon-32x32.png') %>" />
-		<link rel="preload" href="<%= require('./images/center-block_img.avif') %>" as="image" />
 		<link rel="preload" href="<%= require('./images/background_white_pattern.avif') %>" as="image" />
+		<link rel="preload" href="<%= require('./images/center-block_img.avif') %>" as="image" />
+		<link rel="preload" href="<%= require('./images/left-block-borders.avif') %>" as="image" />
+		<link rel="preload" href="<%= require('./images/right-block-borders.avif') %>" as="image" />
 		<style>
 			body {
 				background-image: url("<%= require('./images/background_white_pattern.avif') %>");
 			}
 			.landing__center-block {
 				background-image: url("<%= require('./images/center-block_img.avif') %>");
+			}
+			.landing__left-block__borders {
+				background-image: url("<%= require('./images/left-block-borders.avif') %>");
+			}
+			.landing__right-block__borders {
+				background-image: url("<%= require('./images/right-block-borders.avif') %>");
 			}
 		</style>
 	</head>
