@@ -49,38 +49,6 @@ npm run build
 
 This command creates a production-ready build in the `dist` directory.
 
-## Project Structure
-
-Below is an overview of the project's file organization:
-
-```
-dnd/
-├── src/
-│   ├── assets/
-│   │   └── img/
-│   ├── components/
-│   │   ├── Button/
-│   │   │   ├── Button.tsx
-│   │   │   └── Button.css
-│   │   └── RotatingCrystals/
-│   │       ├── RotatingCrystals.tsx
-│   │       └── RotatingCrystals.css
-│   ├── textures/
-│   │   └── crystal.jpg.dds
-│   ├── models/
-│   │   └── scene.glb
-│   ├── App.tsx
-│   ├── App.css
-│   ├── index.tsx
-│   └── index.html
-├── .babelrc
-├── .gitignore
-├── package.json
-├── tsconfig.json
-├── webpack.config.js
-└── README.md
-```
-
 ## Technologies Used
 
 - **React**: A popular JavaScript library for building interactive user interfaces.

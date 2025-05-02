@@ -65,7 +65,7 @@
 	width: 56.2664%;
 	height: 77.5707%;
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/center-block_img.avif);
+	background-image: url(/center-block_img.avif);
 	background-size: cover;
 	will-change: transform;
 }
@@ -77,7 +77,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/left-block-borders.avif);
+	background-image: url(/left-block-borders.avif);
 	background-size: cover;
 }
 
@@ -107,7 +107,7 @@
 
 .landing__bottom--left__bg {
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/left-bot-tex.avif);
+	background-image: url(/left-bot-tex.avif);
 	will-change: transform;
 }
 
@@ -123,14 +123,14 @@
 
 .landing__bottom-block--left .landing__bottom-block__borders {
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/bottom-left-borders.png);
+	background-image: url(/bottom-left-borders.png);
 	background-size: cover;
 }
 
 .landing__center-bar--left {
 	left: 20.1139351446%;
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/center-bar-left.png);
+	background-image: url(/center-bar-left.png);
 	background-size: cover;
 }
 
@@ -146,7 +146,7 @@
 	left: 21.9106047327%;
 	background-color: rgba(233, 228, 222, 0);
 	z-index: 2;
-	background-image: url(./images/center-corner-left.png);
+	background-image: url(/center-corner-left.png);
 	background-size: cover;
 	will-change: transform;
 }
@@ -161,7 +161,7 @@
 .landing__center-corner--right {
 	right: 21.9106047327%;
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/center-corner-right.png);
+	background-image: url(/center-corner-right.png);
 	background-size: cover;
 	will-change: transform;
 }
@@ -169,7 +169,7 @@
 .landing__center-bar--right {
 	right: 20.1139351446%;
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/center-bar-right.png);
+	background-image: url(/center-bar-right.png);
 	background-size: cover;
 }
 
@@ -188,7 +188,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/right-block-borders.avif);
+	background-image: url(/right-block-borders.avif);
 	background-size: cover;
 }
 
@@ -207,7 +207,7 @@
 
 .landing__bottom--right__bg {
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/right-bot-tex.avif);
+	background-image: url(/right-bot-tex.avif);
 	will-change: transform;
 }
 
@@ -223,7 +223,7 @@
 
 .landing__bottom-block--right .landing__bottom-block__borders {
 	background-color: rgba(233, 228, 222, 0);
-	background-image: url(./images/bottom-right-borders.png);
+	background-image: url(/bottom-right-borders.png);
 	background-size: cover;
 }
 
