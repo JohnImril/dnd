@@ -30,15 +30,15 @@
 }
 
 .button__img--left .button__img__img--bg {
-	background-image: url(../../images/btn_left.png);
+	background-image: url(/btn_left.png);
 }
 
 .button__img--middle .button__img__img--bg {
-	background-image: url(../../images/btn_middle.avif);
+	background-image: url(/btn_middle.avif);
 }
 
 .button__img--right .button__img__img--bg {
-	background-image: url(../../images/btn_right.png);
+	background-image: url(/btn_right.png);
 }
 
 .button__text {
