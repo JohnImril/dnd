@@ -12,14 +12,15 @@ const RotatingCrystals: React.FC = React.memo(() => {
 	const mountRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
-		if (!mountRef.current) return;
+		const mountElement = mountRef.current;
+		if (!mountElement) return;
 
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor(0x000000, 0);
-		mountRef.current.appendChild(renderer.domElement);
+		mountElement.appendChild(renderer.domElement);
 
 		const controls = new OrbitControls(camera, renderer.domElement);
 		controls.enableDamping = true;
@@ -112,8 +113,8 @@ const RotatingCrystals: React.FC = React.memo(() => {
 
 		return () => {
 			window.removeEventListener("resize", onWindowResize);
-			if (mountRef.current) {
-				mountRef.current.removeChild(renderer.domElement);
+			if (mountElement.contains(renderer.domElement)) {
+				mountElement.removeChild(renderer.domElement);
 			}
 		};
 	}, []);
