@@ -20,6 +20,7 @@ const RotatingCrystals: React.FC = React.memo(() => {
 		const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor(0x000000, 0);
+		renderer.domElement.style.opacity = "0";
 		mountElement.appendChild(renderer.domElement);
 
 		const controls = new OrbitControls(camera, renderer.domElement);
@@ -41,6 +42,7 @@ const RotatingCrystals: React.FC = React.memo(() => {
 		});
 
 		const loader = new GLTFLoader();
+		let animationFrameId = 0;
 		loader.load(
 			model,
 			(gltf) => {
@@ -77,9 +79,10 @@ const RotatingCrystals: React.FC = React.memo(() => {
 
 				const clock = new THREE.Clock();
 				let time = 0;
+				let isFirstFrame = true;
 
 				const animate = () => {
-					requestAnimationFrame(animate);
+					animationFrameId = requestAnimationFrame(animate);
 					const delta = clock.getDelta();
 					time += delta;
 
@@ -94,6 +97,11 @@ const RotatingCrystals: React.FC = React.memo(() => {
 					});
 
 					renderer.render(scene, camera);
+
+					if (isFirstFrame) {
+						isFirstFrame = false;
+						mountElement.classList.add("crystals--ready");
+					}
 				};
 
 				animate();
@@ -113,6 +121,10 @@ const RotatingCrystals: React.FC = React.memo(() => {
 
 		return () => {
 			window.removeEventListener("resize", onWindowResize);
+			if (animationFrameId) {
+				cancelAnimationFrame(animationFrameId);
+			}
+			mountElement.classList.remove("crystals--ready");
 			if (mountElement.contains(renderer.domElement)) {
 				mountElement.removeChild(renderer.domElement);
 			}

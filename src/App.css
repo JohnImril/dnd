@@ -64,7 +64,6 @@
 	left: 21.9106%;
 	width: 56.2664%;
 	height: 77.5707%;
-	background-image: url(/center-block_img.avif);
 	background-size: cover;
 	will-change: transform;
 }
@@ -75,7 +74,6 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(/left-block-borders.avif);
 	background-size: cover;
 }
 
@@ -104,7 +102,6 @@
 }
 
 .landing__bottom--left__bg {
-	background-image: url(/left-bot-tex.avif);
 	will-change: transform;
 }
 
@@ -179,7 +176,6 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(/right-block-borders.avif);
 	background-size: cover;
 }
 
@@ -197,7 +193,6 @@
 }
 
 .landing__bottom--right__bg {
-	background-image: url(/right-bot-tex.avif);
 	will-change: transform;
 }
 
@@ -231,6 +226,26 @@
 	height: 100%;
 	justify-content: center;
 	margin-top: 0.0688750863%;
+}
+
+.app--avif-ready .landing__center-block {
+	background-image: url(/center-block_img.avif);
+}
+
+.app--avif-ready .landing__left-block__borders {
+	background-image: url(/left-block-borders.avif);
+}
+
+.app--avif-ready .landing__bottom--left__bg {
+	background-image: url(/left-bot-tex.avif);
+}
+
+.app--avif-ready .landing__right-block__borders {
+	background-image: url(/right-block-borders.avif);
+}
+
+.app--avif-ready .landing__bottom--right__bg {
+	background-image: url(/right-bot-tex.avif);
 }
 
 @media screen and (min-width: 1700px) and (min-height: 1000px) {

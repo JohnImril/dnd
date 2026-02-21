@@ -1,10 +1,57 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { Button } from "./components/Button/Button";
 const RotatingCrystals = lazy(() => import("./components/RotatingCrystals/RotatingCrystals"));
 
 import "./App.css";
 
+const avifAssets = [
+	"/center-block_img.avif",
+	"/left-block-borders.avif",
+	"/right-block-borders.avif",
+	"/left-bot-tex.avif",
+	"/right-bot-tex.avif",
+	"/btn_middle.avif",
+];
+
+const preloadImage = (src: string) =>
+	new Promise<void>((resolve) => {
+		const image = new Image();
+		let isSettled = false;
+
+		const finish = () => {
+			if (isSettled) return;
+			isSettled = true;
+			resolve();
+		};
+
+		image.onload = finish;
+		image.onerror = finish;
+		image.src = src;
+
+		if (typeof image.decode === "function") {
+			image.decode().then(finish).catch(() => {
+				/* wait for onload/onerror */
+			});
+		}
+	});
+
 const App = () => {
+	const [isAvifReady, setIsAvifReady] = useState(false);
+
+	useEffect(() => {
+		let isCancelled = false;
+
+		Promise.allSettled(avifAssets.map(preloadImage)).then(() => {
+			if (!isCancelled) {
+				setIsAvifReady(true);
+			}
+		});
+
+		return () => {
+			isCancelled = true;
+		};
+	}, []);
+
 	const buttonLinks = [
 		{ href: "https://foundry.thedirtysagestavern.com", label: "Play" },
 		{ href: "https://map.thedirtysagestavern.com", label: "Map" },
@@ -23,7 +70,7 @@ const App = () => {
 	const sides = ["left", "right"];
 
 	return (
-		<div className="app">
+		<div className={`app ${isAvifReady ? "app--avif-ready" : ""}`}>
 			<div className="landing">
 				<div className="landing__wrapper-width">
 					<div className="landing__wrapper-height">

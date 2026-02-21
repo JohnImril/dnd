@@ -34,6 +34,10 @@
 }
 
 .button__img--middle .button__img__img--bg {
+	background-image: none;
+}
+
+.app--avif-ready .button__img--middle .button__img__img--bg {
 	background-image: url(/btn_middle.avif);
 }
 
