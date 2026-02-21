@@ -9,12 +9,7 @@
 		top: 0;
 		left: 0;
 		pointer-events: none;
-		opacity: 0;
-		transition: opacity 180ms ease-out;
+		opacity: 1;
 		z-index: 3;
 	}
-}
-
-.crystals.crystals--ready canvas {
-	opacity: 1;
 }
