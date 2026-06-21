@@ -5,13 +5,13 @@ const RotatingCrystals = lazy(() => import("./components/RotatingCrystals/Rotati
 import "./App.css";
 
 const avifAssets = [
-	"/center-block_img.avif",
-	"/left-block-borders.avif",
-	"/right-block-borders.avif",
-	"/left-bot-tex.avif",
-	"/right-bot-tex.avif",
-	"/btn_middle.avif",
-];
+	"center-block_img.avif",
+	"left-block-borders.avif",
+	"right-block-borders.avif",
+	"left-bot-tex.avif",
+	"right-bot-tex.avif",
+	"btn_middle.avif",
+].map((asset) => `${import.meta.env.BASE_URL}${asset}`);
 
 const preloadImage = (src: string) =>
 	new Promise<void>((resolve) => {
@@ -135,9 +135,11 @@ const App = () => {
 				</div>
 			</div>
 
-			<Suspense fallback={<div />}>
-				<RotatingCrystals />
-			</Suspense>
+			{isAvifReady && (
+				<Suspense fallback={<div />}>
+					<RotatingCrystals />
+				</Suspense>
+			)}
 		</div>
 	);
 };

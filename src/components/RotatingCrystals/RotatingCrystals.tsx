@@ -41,9 +41,13 @@ const RotatingCrystals: React.FC = React.memo(() => {
 		});
 
 		const loader = new GLTFLoader();
+		let animationFrameId = 0;
+		let isDisposed = false;
 		loader.load(
 			model,
 			(gltf) => {
+				if (isDisposed) return;
+
 				const model = gltf.scene;
 
 				const initialScale = window.innerWidth > 2540 ? 1.4 : 1.2;
@@ -79,7 +83,9 @@ const RotatingCrystals: React.FC = React.memo(() => {
 				let time = 0;
 
 				const animate = () => {
-					requestAnimationFrame(animate);
+					if (isDisposed) return;
+
+					animationFrameId = requestAnimationFrame(animate);
 					const delta = clock.getDelta();
 					time += delta;
 
@@ -112,7 +118,11 @@ const RotatingCrystals: React.FC = React.memo(() => {
 		scene.add(ambientLight);
 
 		return () => {
+			isDisposed = true;
 			window.removeEventListener("resize", onWindowResize);
+			if (animationFrameId) {
+				cancelAnimationFrame(animationFrameId);
+			}
 			if (mountElement.contains(renderer.domElement)) {
 				mountElement.removeChild(renderer.domElement);
 			}
